@@ -86,10 +86,31 @@
         .button:hover {
             background: #0056b3;
         }
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #007BFF; /* Change the color here */
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* transform: translate(-50%, -50%); */
+            margin-top: -25px; /* Half of the height */
+            margin-left: -25px; /* Half of the width */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
     <!-- consider adding two cards to left and right out of screen that has prev and next def, then we hit next and the next card slides in  -->
+    <div class="loading-spinner" style="display: none;"></div>
+
     <div style="z-index: 2;width: 100%;height: 85%;position: absolute;display: none;" id="dat">
         <textarea name="" style="resize: none;
         height: 85vh;width: 96vw;" id="txt"></textarea>
@@ -233,7 +254,12 @@
             }
             currentIndex = (currentIndex + 1) % vocabulary.length;
 
-            document.querySelector("#showIndex").textContent=currentIndex+1;
+            let field1 = currentIndex+1;
+            let field2 = "/";
+            let field3 = vocabulary.length;
+            let field = field1+field2+field3;
+
+            document.querySelector("#showIndex").textContent=field;
 
             // determine card status then flip
             // it costs 0.5s to flip
@@ -297,11 +323,16 @@
 
                 // Store the updated vocabulary in local storage
                 localStorage.setItem('vocabulary', JSON.stringify(vocabulary));
+                
                 // update cards
                 initCard();
+                
+
 
                 document.querySelector("#dat").style.display = "none";
                 stat=0;
+                // Refresh the webpage
+                // location.reload();
                 return;
             }
             // load
@@ -318,6 +349,12 @@
 
         // Initialize the card with the first word and definition
         initCard();
+        let field1 = currentIndex+1;
+        let field2 = "/";
+        let field3 = vocabulary.length;
+        let field = field1+field2+field3;
+
+        document.querySelector("#showIndex").textContent=field;
     </script>
 </body>
 </html>
