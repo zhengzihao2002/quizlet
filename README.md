@@ -6,4 +6,4 @@ The initial goal was to help Zihao memorize Korean, however, it is now free to p
 1. Hit right arrow for next vocab
 2. hit space to flip the card.
    
-### link <a href="zhengzihao2002.github.io/quizlet">here</a>
+### link <a href="https://zhengzihao2002.github.io/quizlet">here</a>
