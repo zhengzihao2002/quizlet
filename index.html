@@ -466,6 +466,17 @@
                 }
             }
         });
+
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+        if (isMobileDevice()) {
+            const container = document.querySelector('.container');
+            if (container) {
+                container.style.overflow = 'hidden';
+            }
+        }
+
     </script>
 </body>
 </html>
