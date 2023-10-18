@@ -472,11 +472,18 @@
         }
         if (isMobileDevice()) {
             const container = document.querySelector('.container');
+            const buttons = document.querySelectorAll('.button');
+
+
             if (container) {
                 container.style.overflow = 'hidden';
+                // Loop through the elements and set their size to 300px
+                buttons.forEach(button => {
+                    button.style.width = '300px';
+                });
             }
         }
-
+        
     </script>
 </body>
 </html>
