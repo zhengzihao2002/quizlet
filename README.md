@@ -4,6 +4,7 @@
 The initial goal was to help Zihao memorize Korean, however, it is now free to public
 
 1. Hit right arrow for next vocab
-2. hit space to flip the card.
+2. Hit space to flip the card.
+3. Hit left arrow for prev vocab
    
 ### link <a href="https://zhengzihao2002.github.io/quizlet">here</a>
