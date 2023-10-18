@@ -449,6 +449,23 @@
         let field = field1+field2+field3;
 
         document.querySelector("#showIndex").textContent=field;
+
+        document.body.addEventListener('touchstart', function (event) {
+            startX = event.touches[0].clientX;
+        });
+
+        document.body.addEventListener('touchmove', function (event) {
+            if (startX) {
+                const currentX = event.touches[0].clientX;
+                const deltaX = currentX - startX;
+
+                if (deltaX < -250) {
+                    throttleNextCard();
+                } else if (deltaX > 250) {
+                    throttlePrevCard();
+                }
+            }
+        });
     </script>
 </body>
 </html>
