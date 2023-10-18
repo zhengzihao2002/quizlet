@@ -151,8 +151,8 @@
             <button class="button" id="prevButton" onclick="prevCardAction()">上个单词</button>
             <button class="button" id="nextButton" onclick="nextCardAction()">下个单词</button>
             <button class="button" id="dataButton" onclick="loadData()">输入单词</button>
-            <button class="button" disabled  title="敬请期待">匹配卡牌（游戏）</button>
-            <button class="button" disabled  title="敬请期待">小测验</button>
+            <button class="button" disabled  title="敬请期待">Matching</button>
+            <button class="button" disabled  title="敬请期待">Test</button>
             <span id="" style="font-size: 13px;margin-left: 20px;position: absolute;right: 50px;">温馨提示：省电模式下可能出现动画异常</span>
             <span id="" style="font-size: 12px;margin-left: 20px;position: absolute;top:20px;right: 0;">温馨提示：输入数据时，每行代表一个Vocab，Word和Definition用空格分离</span>
             <span id="" style="font-size: 12px;margin-left: 20px;position: absolute;top:40px;right: 0;">温馨提示：清空浏览器缓存会导致单词丢失！</span>
@@ -391,6 +391,16 @@
         });
 
         document.getElementById('dataButton').addEventListener('keydown', function (e) {
+            if (e.key === ' ') {
+                e.preventDefault();
+            }
+        });
+        document.getElementById('prevButton').addEventListener('keydown', function (e) {
+            if (e.key === ' ') {
+                e.preventDefault();
+            }
+        });
+        document.getElementById('nextButton').addEventListener('keydown', function (e) {
             if (e.key === ' ') {
                 e.preventDefault();
             }
