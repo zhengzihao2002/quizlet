@@ -64,7 +64,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            text-align: center;
+            -align: center;
             line-height: 100%;
         }
     
@@ -117,7 +117,7 @@
     <div class="container">
         <div style="z-index: 2;width: 100%;height: 85%;position: absolute;display: none;" id="dat">
             <textarea name="" style="resize: none;
-            height: 100%;width: 100%;font-size: 25px;" id="txt"></textarea>
+            height: 100%;width: 100%;font-size: 25px;" id="txt" placeholder="Enter Vocab here in format 'Vocab Definition'"></textarea>
         </div>
         <div class="card trans" id="temp1" style="left: -110%;">
             <div class="front">
@@ -148,9 +148,9 @@
         </div>
         <div class="button-container" style="">
             <span id="showIndex" style="font-size: 30px;margin-right: 20px;position: absolute;left: 50px;">1</span>
-            <button class="button" id="prevButton" onclick="prevCardAction()">上个单词</button>
-            <button class="button" id="nextButton" onclick="nextCardAction()">下个单词</button>
-            <button class="button" id="dataButton" onclick="loadData()">输入单词</button>
+            <button class="button" id="prevButton" onclick="prevCardAction()">Previous</button>
+            <button class="button" id="nextButton" onclick="nextCardAction()">Next</button>
+            <button class="button" id="dataButton" onclick="loadData()">New Word</button>
             <button class="button" disabled  title="敬请期待">Matching</button>
             <button class="button" disabled  title="敬请期待">Test</button>
             <span id="" style="font-size: 13px;margin-left: 20px;position: absolute;right: 50px;">温馨提示：省电模式下可能出现动画异常</span>
@@ -188,8 +188,8 @@
 
 
         let vocabulary = [
-            { word: 'Loading...', definition: '1' },
-            { word: 'Loading...', definition: '2' },
+            { word: 'Please Enter word below', definition: '1' },
+            { word: 'Please Enter word below', definition: '2' },
         ];
 
 
