@@ -12,4 +12,6 @@ Upcomming features:
 2. Matching
 3. Themes (such as syncing with OS)
    
-### link <a href="https://zhengzihao2002.github.io/quizlet">here</a>
+### link <a href="https://zhengzihao2002.github.io/quizlet">Live Demo</a>
+
+![]('截屏2024-02-16 上午12.43.08.png')
