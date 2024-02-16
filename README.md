@@ -14,4 +14,4 @@ Upcomming features:
    
 ### link <a href="https://zhengzihao2002.github.io/quizlet">Live Demo</a>
 
-![]('截屏2024-02-16 上午12.43.08.png')
+![The demo](img.png)
